@@ -5,12 +5,6 @@
 # (1, 1*2, 1*2*3, 1*2*3*4)
 import math
 num = int(input("Введите число: "))
-mass = []
-for i in range (1, num+1, 1):
-    if i == 1:
-       i = i 
-       mass.append(i)
-    else :       
-        i = i* math.factorial(i - 1)
-        mass.append(i)
+li = [x for x in range(1,num+1)]
+mass = list( map(lambda i : i* math.factorial(i-1), li))
 print(f"Произведения чисел от 1 до {num}:  {mass}")
